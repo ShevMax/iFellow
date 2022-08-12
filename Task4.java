@@ -16,16 +16,16 @@ public class Task4 {
         }
         while(minute < 0 || minute > 60);
         
-        int angle = calculateAngle(hour, minute);
+        double angle = calculateAngle(hour, minute);
         
         System.out.println("The angle between the hands of the clock is " + angle);
     }
     
-    public static int calculateAngle(int hour, int minute){
-        int hourCircleSector = hour * 360 / 12;
-        int minuteCircleSector = minute * 360 / 60;
+    public static double calculateAngle(int hour, int minute){
+        double hourCircleSector = hour * 30 + minute * 0.5;
+        double minuteCircleSector = minute * 6;
         
-        int angle = Math.abs(hourCircleSector - minuteCircleSector);
+        double angle = Math.abs(hourCircleSector - minuteCircleSector);
 
         if(angle > 180)
         {
