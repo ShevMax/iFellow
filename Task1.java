@@ -4,13 +4,13 @@ public class Task1 {
     public static void main(String[] args) {
 
         int a = 10;
-        int array[] = new int[a];
+        double array[] = new double[a];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 11);
+            array[i] = Math.random();
         }
 
-        int max = array[0];
-        int min = array[0];
+        double max = array[0];
+        double min = array[0];
 		double sum = 0;
         
         for (int i = 0; i < array.length; i++) {
@@ -25,6 +25,6 @@ public class Task1 {
         System.out.println("Maximum = " + max);
         System.out.println("Minimum = " + min);
         System.out.println("Average = " + avg);
-        //System.out.print ("Array = " + Arrays.toString(array));
+        System.out.print ("Array = " + Arrays.toString(array));
     }
 }
